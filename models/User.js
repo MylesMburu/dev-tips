@@ -17,6 +17,6 @@ const UserSchema = new Schema({
     },
     });
 
-const User = models.User || model('User', UserSchema);
+const User = models.User || model('User', UserSchema);  // if models.User exists, use it; otherwise, create a new model called 'User' using the UserSchema
 
 export default User;
