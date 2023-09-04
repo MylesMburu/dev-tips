@@ -23,7 +23,7 @@ const Form = ({type, post, setPost, submitting, handleSubmit}) => {
             <label htmlFor="">
                 <span className='font-bold'>Tag</span>
                 <input 
-                value={post.tip}
+                value={post.tag}
                 onChange={(e) => setPost({ ...post, tag: e.target.value })}
                 placeholder='#tag'
                 required
