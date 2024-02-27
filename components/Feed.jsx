@@ -34,6 +34,17 @@ export const Feed = () => {
         className='search_input peer'
         />
       </form>
+
+      <div>
+      {tips.map((tip) => (
+        <div key={tip._id} className="p-6 max-w-sm mx-auto bg-white rounded-xl shadow-md flex items-center space-x-4 my-4">
+          <div>
+            <div className="text-xl font-medium text-black">{tip.tag}</div>
+            <p className="text-gray-500">{tip.tip}</p>
+          </div>
+        </div>
+      ))}
+    </div>
     </section>
     )
 }
