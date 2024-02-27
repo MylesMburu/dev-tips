@@ -6,7 +6,7 @@ export const GET = async (request) => {
   
 
   try {
-    await dbConnect()
+    await connectToDB()
     const tips = await Tip.find({}) // fetch all tips
     return new Response(JSON.stringify(tips),{status: 200})
   } catch (error) {
