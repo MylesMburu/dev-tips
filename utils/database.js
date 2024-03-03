@@ -5,10 +5,6 @@ let isConnected = false;
 export const connectToDB = async () => {
   mongoose.set('strictQuery',true); //this will throw an error if you try to update a field that is not in the schema
 
-  if(isConnected){
-    console.log('Already connected to DB');
-    return;
-  }
 
   try {
     await mongoose.connect(process.env.MONGO_URI, {
