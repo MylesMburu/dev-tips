@@ -15,6 +15,7 @@ export const Feed = () => {
       const getPosts = async () => {
         const response = await fetch('/api/tips');
         const data = await response.json();
+        console.log(data);
         setTips(data);
       }
 
